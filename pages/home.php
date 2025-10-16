@@ -13,6 +13,7 @@
          echo '<br/>';
          echo $test ;
       ?>
+      <br/>
    </pre>
 </body>
 </html>
