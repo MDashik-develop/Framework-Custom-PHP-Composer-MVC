@@ -7,5 +7,11 @@
 </head>
 <body>
    <h1>this is dashboard</h1>
+   <span>user name: <strong><?php echo $_SESSION['user_name']; ?></strong></span>
+   <pre>
+      <?php
+      echo is_callable([Guest::class, 'guestHandle']);
+      ?>
+   </pre>
 </body>
 </html>

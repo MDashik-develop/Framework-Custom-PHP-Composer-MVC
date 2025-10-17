@@ -6,6 +6,7 @@ use App\Services\Route;
 define('APP_ROOT', __DIR__);
 
 require_once('vendor/autoload.php');
+
 // autoloader for namespaces classes
 spl_autoload_register(function ($class) {
    $classFile = str_replace('\\', DIRECTORY_SEPARATOR, $class . '.php');

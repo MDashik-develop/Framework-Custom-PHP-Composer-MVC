@@ -37,8 +37,9 @@ class Route{
 
             //Middleware authHandle
             foreach ($route['middleware'] as $middleware) {
-               $middlewareClass = new $middleware;
-               $middlewareClass->authHandle();
+               if(is_callable($middleware)){
+                  is_callable($middleware);
+               }
             }
 
             $controllerClass = self::$controllerNamespace.$route['controller'];
