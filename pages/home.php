@@ -163,11 +163,13 @@ function codeExamples() {
                         <span class="text-gray-300">routes/web.php</span>
                     </div>
                     <div class="p-6">
-                        <pre class="text-green-400 text-sm"><code>
+                        <pre class="text-green-400 text-sm">
+                           <code style="text-wrap: auto;">
 Route::get('/', 'HomeController', 'index');
 Route::get('login', 'LoginController', 'login');
 Route::get('dashboard', 'UserController', 'dashboard', [Auth::class, 'auth']);
-                        </code></pre>
+                           </code>
+                        </pre>
                     </div>
                 </div>
 
@@ -177,14 +179,24 @@ Route::get('dashboard', 'UserController', 'dashboard', [Auth::class, 'auth']);
                         <span class="text-gray-300">app/Controller/UserController.php</span>
                     </div>
                     <div class="p-6">
-                        <pre class="text-green-400 text-sm"><code>
+                        <pre class="text-green-400 text-sm">
+                           <code style="text-wrap: auto;">
 class UserController {
-    public function dashboard() {
-        $user = ['name' => 'John Doe', 'email' => 'john@example.com'];
-        return view('dashboard', compact('user'));
-    }
+   public function index(){
+      $data = [
+         0 => ['name' => 'hoem', 'url' => '/'],
+         1 => ['name' => 'about', 'url' => 'about']
+      ];
+      $test = 'test'; // also sql here
+      view('home', compact('data', 'test'));
+   }
+
+   public function redirect(){
+      redirect('/');
+   }
 }
-                        </code></pre>
+                           </code>
+                        </pre>
                     </div>
                 </div>
             </div>
